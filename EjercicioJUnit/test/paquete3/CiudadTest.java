@@ -46,7 +46,7 @@ public class CiudadTest {
         System.out.println("establecerNombre");
         String nom = "Loja";
         instance.establecerNombre(nom);
-        Field field = instance.getClass().getDeclaredField("nombre");
+        Field field = instance.getClass().getDeclaredField("nombres");
         field.setAccessible(true);
         assertEquals(field.get(instance), "Loja");
     }
