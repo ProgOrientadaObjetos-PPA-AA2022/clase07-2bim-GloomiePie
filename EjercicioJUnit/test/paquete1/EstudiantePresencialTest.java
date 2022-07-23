@@ -125,10 +125,12 @@ public class EstudiantePresencialTest {
     @Test
     public void testObtenerMatriculaPresencial() {
         System.out.println("obtenerMatriculaPresencial");
-        double expResult = 30.0;
+        double expResult = 5.0;
+        instance.establecerNumeroCreditos(10);
+        instance.establecerCostoCredito(expResult);
         instance.calcularMatriculaPresencial();
         double result = instance.obtenerMatriculaPresencial();
-        assertEquals(expResult, result, 30.0);
+        assertEquals(expResult, result, 50.0);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
